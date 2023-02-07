@@ -1,11 +1,25 @@
 import React from 'react';
+import Action from './action';
 import './Header.css';
+import Me from '../../resources/images/me-4-removebg.png'
+import HeaderSocial from './HeaderSocial';
 
 const Header = () => {
     return (
-        <div>
-            <p>Header</p>
-        </div>
+        <header>
+            <div className="container header__container">
+                <h5>Hello I'm</h5>
+                <h1>MD Nadim Rijvi Shakib</h1>
+                <h5 className="text-light">Full Stack Developer</h5>
+                <Action />
+                <HeaderSocial></HeaderSocial>
+
+                <div className="me">
+                    <img src={Me} alt="" />
+                </div>
+                <a href="#contact" className='scroll__down'>Scroll Down</a>
+            </div>
+        </header>
     );
 };
 
