@@ -59,6 +59,7 @@ h1 {
 
 section {
   margin-top: 8rem;
+  height: 100vh;
 }
 
 section>h2,
@@ -80,11 +81,12 @@ a {
   color: var(--color-primary);
   transition: var(--transition);
 }
-a:hover{
+
+a:hover {
   color: var(--color-white);
 }
 
-.btn{
+.btn {
   width: max-content;
   display: inline-block;
   color: var(--color-primary);
@@ -95,18 +97,18 @@ a:hover{
   transition: var(--transition);
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--color-white);
   color: var(--color-bg);
   border-color: transparent;
 }
 
-.btn-primary{
+.btn-primary {
   background: var(--color-primary);
   color: var(--color-bg);
 }
 
-img{
+img {
   display: block;
   width: 100%;
   object-fit: cover;
@@ -115,11 +117,11 @@ img{
 /*----Media Queries(Medium)*/
 
 @media screen and (max-width: 1024px) {
-  .container{
+  .container {
     width: var(--container-width-md);
   }
 
-  section{
+  section {
     margin-top: 6rem;
   }
 }
@@ -127,11 +129,11 @@ img{
 /*----Media Queries(Small)*/
 
 @media screen and (max-width: 600px) {
-  .container{
+  .container {
     width: var(--container-width-sm);
   }
 
-  section > h2{
+  section>h2 {
     margin-top: 2rem;
   }
 }
