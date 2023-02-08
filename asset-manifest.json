@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.190e3aaa.css",
+    "main.js": "/my-portfolio/static/js/main.061f8230.js",
+    "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/CV_MD_Nadim_Rijvi_Shakib.pdf": "/my-portfolio/static/media/CV_MD_Nadim_Rijvi_Shakib.205045992754e5ec49bc.pdf",
+    "static/media/me-4.png": "/my-portfolio/static/media/me-4.877dbac5092d50d10980.png",
+    "static/media/me-3.png": "/my-portfolio/static/media/me-3.11d915c539a0a5487a50.png",
+    "index.html": "/my-portfolio/index.html",
+    "main.190e3aaa.css.map": "/my-portfolio/static/css/main.190e3aaa.css.map",
+    "main.061f8230.js.map": "/my-portfolio/static/js/main.061f8230.js.map",
+    "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.190e3aaa.css",
+    "static/js/main.061f8230.js"
+  ]
+}
