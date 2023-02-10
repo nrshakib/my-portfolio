@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.cb84af2f.css",
-    "main.js": "/my-portfolio/static/js/main.265d0943.js",
+    "main.css": "/my-portfolio/static/css/main.18cce8e5.css",
+    "main.js": "/my-portfolio/static/js/main.49b78d2e.js",
     "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/CV_MD_Nadim_Rijvi_Shakib.pdf": "/my-portfolio/static/media/CV_MD_Nadim_Rijvi_Shakib.205045992754e5ec49bc.pdf",
     "static/media/me-4.png": "/my-portfolio/static/media/me-4.877dbac5092d50d10980.png",
@@ -10,12 +10,12 @@
     "static/media/admin-dashboard.jpg": "/my-portfolio/static/media/admin-dashboard.06a59fa47eb1e83df5e0.jpg",
     "static/media/e-commerce.jpg": "/my-portfolio/static/media/e-commerce.66e3a8134eb832dcc7be.jpg",
     "index.html": "/my-portfolio/index.html",
-    "main.cb84af2f.css.map": "/my-portfolio/static/css/main.cb84af2f.css.map",
-    "main.265d0943.js.map": "/my-portfolio/static/js/main.265d0943.js.map",
+    "main.18cce8e5.css.map": "/my-portfolio/static/css/main.18cce8e5.css.map",
+    "main.49b78d2e.js.map": "/my-portfolio/static/js/main.49b78d2e.js.map",
     "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb84af2f.css",
-    "static/js/main.265d0943.js"
+    "static/css/main.18cce8e5.css",
+    "static/js/main.49b78d2e.js"
   ]
 }
