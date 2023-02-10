@@ -3,6 +3,7 @@ import './Navbar.css';
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { BiBook, BiMessageSquareDetail } from 'react-icons/bi'
 import { RiServiceLine } from 'react-icons/ri'
+import { FiBox } from 'react-icons/fi'
 
 const Navbar = () => {
     const [activeNav, setActiveNav] = useState('#');
@@ -19,6 +20,9 @@ const Navbar = () => {
 
             <a href="#services" onClick={() => setActiveNav('#services')}
                 className={activeNav === '#services' ? 'active' : ''}><RiServiceLine /></a>
+
+            <a href="#portfolio" onClick={() => setActiveNav('#portfolio')}
+                className={activeNav === '#portfolio' ? 'active' : ''}><FiBox /></a>
 
             <a href="#contact" onClick={() => setActiveNav('#contact')}
                 className={activeNav === '#contact' ? 'active' : ''}><BiMessageSquareDetail /></a>
