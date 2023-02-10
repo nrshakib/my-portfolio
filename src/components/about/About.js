@@ -34,7 +34,7 @@ const About = () => {
                             <small>7+ Hands On Projects</small>
                         </article>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consectetur impedit ea voluptatibus eveniet dolore error neque, vitae adipisci ducimus eligendi, sint officiis, et placeat excepturi dolorem! Cumque, dolore natus.</p>
+                    <p>I'm a <b className='about-bold'>Web Developer</b>.I work with JavaScript ant it's various technologies.I'm graduated in <b className='about-bold'>Computer Science and Engireering</b> and now working on <b className='about-bold'>Web development</b>.</p>
                     <a href="#contact" className='btn btn-primary'>Let's Talk</a>
                 </div>
             </div>

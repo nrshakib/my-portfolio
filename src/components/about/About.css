@@ -63,8 +63,13 @@
 }
 
 .about-content p {
-    margin: 2rem 0 .95rem;
+    margin: 2rem 0 0.95rem;
     color: var(--color-light);
+    font-size: 0.9rem;
+}
+
+.about-bold {
+    font-size: 1.3rem;
 }
 
 /*----Media Queries(Medium)*/
