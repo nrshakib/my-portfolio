@@ -38,7 +38,7 @@ const About = () => {
             I'm a <b className="about-bold">Web Developer</b>.I work with
             JavaScript ant it's various technologies.I'm graduated in{" "}
             <b className="about-bold">Computer Science and Engineering</b> and
-            now working on <b className="about-bold">Web development</b>.
+            now working on <b className="about-bold"> <span className="mern-m">M</span><span className="mern-e">E</span><span className="mern-r">R</span><span className="mern-n">N</span> Stack Web Development</b>.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk
