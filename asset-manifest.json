@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.201a4eae.css",
-    "main.js": "/my-portfolio/static/js/main.0aa15879.js",
+    "main.js": "/my-portfolio/static/js/main.e417ed6d.js",
     "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
-    "static/media/CV_MD_Nadim_Rijvi_Shakib.pdf": "/my-portfolio/static/media/CV_MD_Nadim_Rijvi_Shakib.205045992754e5ec49bc.pdf",
+    "static/media/CV_MD_Nadim_Rijvi_Shakib.pdf": "/my-portfolio/static/media/CV_MD_Nadim_Rijvi_Shakib.5834ce2ed71716dfffe4.pdf",
+    "static/media/restaurant.png": "/my-portfolio/static/media/restaurant.400db87fab80e9175cec.png",
     "static/media/me-4.png": "/my-portfolio/static/media/me-4.877dbac5092d50d10980.png",
     "static/media/me-3.png": "/my-portfolio/static/media/me-3.11d915c539a0a5487a50.png",
     "static/media/temperature app.jpg": "/my-portfolio/static/media/temperature app.68732731d809f7c6805e.jpg",
@@ -11,11 +12,11 @@
     "static/media/e-commerce.jpg": "/my-portfolio/static/media/e-commerce.66e3a8134eb832dcc7be.jpg",
     "index.html": "/my-portfolio/index.html",
     "main.201a4eae.css.map": "/my-portfolio/static/css/main.201a4eae.css.map",
-    "main.0aa15879.js.map": "/my-portfolio/static/js/main.0aa15879.js.map",
+    "main.e417ed6d.js.map": "/my-portfolio/static/js/main.e417ed6d.js.map",
     "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.201a4eae.css",
-    "static/js/main.0aa15879.js"
+    "static/js/main.e417ed6d.js"
   ]
 }
