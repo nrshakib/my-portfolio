@@ -11,14 +11,14 @@ const data = [
   {
     id: 1,
     image: Img1,
-    title: "Car Service Site",
+    title: "Car Service Site(Full Stack)",
     github: "https://github.com/nrshakib/genius-car-services",
     live: "https://github.com/nrshakib/genius-car-services",
   },
   {
     id: 2,
     image: Img2,
-    title: "E-commerce Site",
+    title: "E-commerce Site(Full Stack)",
     github: "https://github.com/nrshakib/ecommerce-ej-fullstack",
     live: "https://github.com/nrshakib/ecommerce-ej-fullstack",
   },
