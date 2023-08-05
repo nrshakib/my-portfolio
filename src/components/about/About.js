@@ -21,24 +21,32 @@ const About = () => {
             <article className="about-card">
               <MdOutlineMoreTime className="about-icon" />
               <h5>Experience</h5>
-              <small>1+ Hands On Experience</small>
+              <small>2+ Years Hands On Experience</small>
             </article>
             <article className="about-card">
               <SiExpertsexchange className="about-icon" />
               <h5>Expertise On</h5>
-              <small>ReactJs,NodeJs</small>
+              <small>MERS Stack</small>
             </article>
             <article className="about-card">
               <BsFolderCheck className="about-icon" />
               <h5>Projects</h5>
-              <small>7+ Hands On Projects</small>
+              <small>10+ Hands On Projects</small>
             </article>
           </div>
           <p>
             I'm a <b className="about-bold">Web Developer</b>.I work with
             JavaScript ant it's various technologies.I'm graduated in{" "}
             <b className="about-bold">Computer Science and Engineering</b> and
-            now working on <b className="about-bold"> <span className="mern-m">M</span><span className="mern-e">E</span><span className="mern-r">R</span><span className="mern-n">N</span> Stack Web Development</b>.
+            now working on{" "}
+            <b className="about-bold">
+              {" "}
+              <span className="mern-m">M</span>
+              <span className="mern-e">E</span>
+              <span className="mern-r">R</span>
+              <span className="mern-n">N</span> Stack Web Development
+            </b>
+            .
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk

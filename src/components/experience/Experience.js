@@ -50,7 +50,7 @@ const Experience = () => {
             <article className="experience-details">
               <HiBadgeCheck className="experience-details-icon" />
               <div>
-                <h4>JavaScript</h4>
+                <h4>JavaScript(ES6)</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </article>
