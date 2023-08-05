@@ -26,7 +26,7 @@ const About = () => {
             <article className="about-card">
               <SiExpertsexchange className="about-icon" />
               <h5>Expertise On</h5>
-              <small>MERS Stack</small>
+              <small>MERS Stack Development</small>
             </article>
             <article className="about-card">
               <BsFolderCheck className="about-icon" />
