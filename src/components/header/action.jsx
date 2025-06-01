@@ -1,6 +1,6 @@
 import React from "react";
-import CV from "../../resources/files/CV_MD_Nadim_Rijvi_Shakib.pdf";
-import Resume from "../../resources/files/Resume_MD_Nadim_Rijvi_Shakib.pdf";
+import CV from "../../../public/resources/files/CV_MD_Nadim_Rijvi_Shakib.pdf";
+import Resume from "../../../public/resources/files/Resume_MD_Nadim_Rijvi_Shakib.pdf";
 
 const Action = () => {
   return (

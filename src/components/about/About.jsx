@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import ME from "../../resources/images/me-3.png";
+import Me from "../../../public/resources/images/me-3.png";
 import { MdOutlineMoreTime } from "react-icons/md";
 import { SiExpertsexchange } from "react-icons/si";
 import { BsFolderCheck } from "react-icons/bs";
@@ -13,7 +13,7 @@ const About = () => {
       <div className="container about-container">
         <div className="about-me">
           <div className="about-me-image">
-            <img src={ME} alt="" />
+            <img src={Me} alt="" />
           </div>
         </div>
         <div className="about-content">
