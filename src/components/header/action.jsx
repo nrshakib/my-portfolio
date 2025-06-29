@@ -2,10 +2,10 @@ import CV from "../../../public/resources/files/CV_MD_Nadim_Rijvi_Shakib.pdf";
 import Resume from "../../../public/resources/files/Resume_MD_Nadim_Rijvi_Shakib.pdf";
 
 const Action = () => {
-  const handleDownload = (file) => {
+  const handleDownload = (filePath) => {
     const link = document.createElement("a");
-    link.href = file;
-    link.download = file.split("/").pop();
+    link.href = filePath;
+    link.download = filePath.split("/").pop();
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -16,12 +16,23 @@ const Action = () => {
   };
 
   return (
-    <div className="flex items-center gap-5">
-      <button onClick={() => handleDownload(CV)} className="btn">
+    <div className="flex flex-col items-start gap-5">
+      {/* Pass the file paths as string */}
+      <button
+        onClick={() =>
+          handleDownload("/resources/files/CV_MD_Nadim_Rijvi_Shakib.pdf")
+        }
+        className="btn"
+      >
         Download CV
       </button>
 
-      <button onClick={() => handleDownload(Resume)} className="btn">
+      <button
+        onClick={() =>
+          handleDownload("/resources/files/Resume_MD_Nadim_Rijvi_Shakib.pdf")
+        }
+        className="btn"
+      >
         Download Resume
       </button>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import Me from "../../../public/resources/images/me-3.png";
+// import Me from "../../../public/resources/images/me-3.png";
 import { MdOutlineMoreTime } from "react-icons/md";
 import { SiExpertsexchange } from "react-icons/si";
 import { BsFolderCheck } from "react-icons/bs";
