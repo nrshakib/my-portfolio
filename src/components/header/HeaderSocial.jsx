@@ -11,9 +11,9 @@ const HeaderSocial = () => {
       <Link to="https://github.com/nrshakib" target="_blank">
         <BsGithub></BsGithub>
       </Link>
-      <Link to="https://bdjobs.com" target="_blank">
+      {/* <Link to="https://bdjobs.com" target="_blank">
         <BsDoorOpenFill />
-      </Link>
+      </Link> */}
     </div>
   );
 };
