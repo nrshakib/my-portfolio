@@ -1,6 +1,6 @@
 .about-container {
   display: grid;
-  grid-template-columns: 35% 50%;
+  grid-template-columns: 100%;
   gap: 30px;
   margin-bottom: 0;
 }
@@ -68,7 +68,7 @@
 }
 
 .about-content p {
-  margin: 2rem 0 0.95rem;
+  margin: 0.5rem 0 0.65rem;
   color: var(--color-light);
   font-size: 0.9rem;
 }
@@ -78,7 +78,7 @@
 }
 .about-bold:hover {
   font-size: 1.5rem;
-  color: rgb(159, 161, 159);
+  color: #9fa19f;
   cursor: pointer;
 }
 .about-bold:hover .mern-m {
@@ -125,12 +125,12 @@
 
 @media screen and (max-width: 600px) {
   .about-me {
-    width: 65%;
+    width: 100%;
     margin: 0 auto 3rem;
   }
 
   .about-cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 

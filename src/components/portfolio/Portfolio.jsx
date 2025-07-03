@@ -6,28 +6,29 @@ import Img3 from "../../../public/resources/images/portfolio/admin-dashboard.jpg
 import Img4 from "../../../public/resources/images/portfolio/restaurant.png";
 import Img5 from "../../../public/resources/images/portfolio/e-commerce.jpg";
 import Img6 from "../../../public/resources/images/portfolio/temperature app.jpg";
+import { div } from "motion/react-client";
 
 const data = [
   {
     id: 1,
-    image: Img1,
-    title: "Car Service Site(Full Stack)",
-    github: "https://github.com/nrshakib/genius-car-services",
-    live: "https://github.com/nrshakib/genius-car-services",
+    // image: Img1,
+    title: "Photo Generator Website",
+    // github: "https://github.com/nrshakib/genius-car-services",
+    live: "https://yannick-ai-photo-generator-website.vercel.app/",
   },
   {
     id: 2,
-    image: Img2,
-    title: "E-commerce Site(Full Stack)",
-    github: "https://github.com/nrshakib/ecommerce-ej-fullstack",
-    live: "https://github.com/nrshakib/ecommerce-ej-fullstack",
+    // image: Img2,
+    title: "E-commerce Site with API Integration",
+    // github: "https://github.com/nrshakib/ecommerce-ej-fullstack",
+    live: "https://your-jewel.com/",
   },
   {
     id: 3,
     image: Img3,
-    title: "Admin Dashboard using ReactJs",
-    github: "https://github.com/nrshakib/admin-dashboard",
-    live: "https://nrshakib.github.io/admin-dashboard/",
+    title: "Admin Dashboard using ReactJs,TailwindCSS & MUI",
+    // github: "https://github.com/nrshakib/admin-dashboard",
+    live: "https://time-tracking-app-dashboard.netlify.app/",
   },
   {
     id: 4,
@@ -36,16 +37,9 @@ const data = [
     github: "https://github.com/nrshakib/restaurant-website-react",
     live: "https://nrshakib.github.io/restaurant-website-react/",
   },
+
   {
     id: 5,
-    image: Img5,
-    title: "E-Commerce Site using JS",
-    github:
-      "https://github.com/nrshakib/Panda-eCommerce-usingBootstrap-from-Figma",
-    live: "https://nrshakib.github.io/Panda-eCommerce-usingBootstrap-from-Figma/",
-  },
-  {
-    id: 6,
     image: Img6,
     title: "City Temperature App using Js",
     github: "https://github.com/nrshakib/city-temperature",
@@ -63,13 +57,15 @@ const Portfolio = () => {
           return (
             <article key={id} className="portfolio-item">
               <div className="portfolio-item-image">
-                <img src={image} alt={title} />
+                {image ? <img src={image} alt={title} /> : <div></div>}
               </div>
               <h3>{title}</h3>
               <div className="portfolio-item-action">
-                <a href={github} className="btn" target="_blank">
-                  Github
-                </a>
+                {github && (
+                  <a href={github} className="btn" target="_blank">
+                    Github
+                  </a>
+                )}
                 <a href={live} className="btn btn-primary" target="_blank">
                   Live Demo
                 </a>

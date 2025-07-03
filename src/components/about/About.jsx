@@ -21,12 +21,24 @@ const About = () => {
             <article className="about-card">
               <MdOutlineMoreTime className="about-icon" />
               <h5>Experience</h5>
-              <small>2+ Years Hands On Experience</small>
+              <small>1+ Year Experience</small>
+              <p>
+                as{" "}
+                <span className="text-white font-medium sm:text-lg">
+                  Front End Developer
+                </span>
+                <p>
+                  at{" "}
+                  <span className="text-white font-medium text-lg">
+                    Spark Tech Agency
+                  </span>
+                </p>
+              </p>
             </article>
             <article className="about-card">
               <SiExpertsexchange className="about-icon" />
               <h5>Expertise On</h5>
-              <small>MERS Stack Development</small>
+              <small>Front End Development</small>
             </article>
             <article className="about-card">
               <BsFolderCheck className="about-icon" />
@@ -34,9 +46,13 @@ const About = () => {
               <small>10+ Hands On Projects</small>
             </article>
           </div>
-          <p>
-            I'm a <b className="about-bold">Web Developer</b>.I work with
-            JavaScript ant it's various technologies.I'm graduated in{" "}
+          <p className="text-justify">
+            I'm a <b className="about-bold">Front End Developer</b>.I work with{" "}
+            <span className="text-[#9fa19f] font-semibold text-lg">
+              JavaScript, ReactJs, NextJs, TailwindCSS, MaterialUI, Ant Design,
+              RTK Query
+            </span>
+            .I'm graduated in{" "}
             <b className="about-bold">Computer Science and Engineering</b> and
             now working on{" "}
             <b className="about-bold">

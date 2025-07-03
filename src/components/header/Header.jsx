@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header className="relative w-full h-auto sm:h-[120vh] md:h-[50vh] top-10 sm:top-40">
+    <header className="relative w-[99%] mx-auto h-auto sm:h-[120vh] md:h-[50vh] top-10 sm:top-40">
       <div className="text-center">
         {/* Introduction Section */}
         <div className="flex flex-col items-center text-center gap-3 my-8">
@@ -20,7 +20,7 @@ const Header = () => {
             Hello, I'm
           </motion.p>
           <motion.p
-            className="text-2xl sm:text-7xl font-semibold font-sans"
+            className="text-2xl sm:text-3xl lg:text-7xl font-semibold font-sans"
             style={{
               fontFamily: "Quicksand, sans-serif",
               textShadow: "0 0 10px rgba(255, 255, 255,1)",
@@ -97,13 +97,13 @@ const Header = () => {
         </div>
 
         {/* Scroll Down Button */}
-        <Link
+        {/* <Link
           to="#contact"
           className="flex items-center gap-2 absolute top-32 right-0 rotate-90 font-light text-sm "
         >
           <p>Scroll Down</p>
           <FaArrowDown className="rotate-270" />
-        </Link>
+        </Link> */}
       </div>
     </header>
   );

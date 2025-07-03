@@ -15,14 +15,7 @@ const Experience = () => {
             <article className="experience-details">
               <HiBadgeCheck className="experience-details-icon" />
               <div>
-                <h4>HTML</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience-details">
-              <HiBadgeCheck className="experience-details-icon" />
-              <div>
-                <h4>CSS</h4>
+                <p>HTML & CSS</p>
                 <small className="text-light">Experienced</small>
               </div>
             </article>
@@ -65,14 +58,28 @@ const Experience = () => {
               <HiBadgeCheck className="experience-details-icon" />
               <div>
                 <h4>NextJs</h4>
+                <small className="text-light">Moderate</small>
+              </div>
+            </article>
+            <article className="experience-details">
+              <HiBadgeCheck className="experience-details-icon" />
+              <div>
+                <h4>RTK Query</h4>
                 <small className="text-light">Beginner</small>
+              </div>
+            </article>
+            <article className="experience-details">
+              <HiBadgeCheck className="experience-details-icon" />
+              <div>
+                <h4>Material UI, Ant Design</h4>
+                <small className="text-light">Experienced</small>
               </div>
             </article>
           </div>
         </div>
 
         {/* Back End Section*/}
-        <div className="experience-backend">
+        {/* <div className="experience-backend">
           <h3>Backend Development</h3>
           <div className="experience-content">
             <article className="experience-details">
@@ -97,7 +104,7 @@ const Experience = () => {
               </div>
             </article>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
