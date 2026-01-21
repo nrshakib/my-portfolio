@@ -1,24 +1,62 @@
-import React from 'react';
-import { BsFacebook, BsLinkedin, BsGithub } from 'react-icons/bs'
+import React from "react";
+import { BsFacebook, BsLinkedin, BsGithub } from "react-icons/bs";
 
 const Footer = () => {
-    return (
-        <footer className="bg-[var(--color-primary)] py-12 text-center text-[0.9rem] mt-28">
-            <a href="#" className="text-[var(--color-bg)] text-[1.5rem] font-medium mb-8 inline-block">MD Nadim Rijvi Shakib</a>
+  return (
+    <footer className="bg-gray-950 border-t border-gray-800 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 text-center">
+        {/* Name / Logo */}
+        <a
+          href="#"
+          className="inline-block text-xl sm:text-2xl font-semibold text-white hover:text-blue-400 transition mb-6"
+        >
+          MD Nadim Rijvi Shakib
+        </a>
 
-            <div className="flex justify-center gap-4 mb-8">
-                <a href="https://www.facebook.com/nadimrijvi.shakib" className="bg-[var(--color-bg)] text-[var(--color-white)] p-3 rounded-[0.7rem] flex border border-transparent hover:bg-transparent hover:text-[var(--color-bg)] hover:border-black"><BsFacebook /></a>
-                <a href="https://www.linkedin.com/in/mdnadimrijvishakib/" className="bg-[var(--color-bg)] text-[var(--color-white)] p-3 rounded-[0.7rem] flex border border-transparent hover:bg-transparent hover:text-[var(--color-bg)] hover:border-black"><BsLinkedin /></a>
-                <a href="https://github.com/nrshakib" className="bg-[var(--color-bg)] text-[var(--color-white)] p-3 rounded-[0.7rem] flex border border-transparent hover:bg-transparent hover:text-[var(--color-bg)] hover:border-black"><BsGithub /></a>
-            </div>
-            <div className="mb-16 text-[var(--color-bg)]">
-                <small>&copy; MD Nadim Rijvi Shakib.
-                    <p>All Right Reserved</p>
-                    <p>{new Date().getFullYear()}</p>
-                </small>
-            </div>
-        </footer>
-    );
+        {/* Social Links */}
+        <div className="flex justify-center gap-5 mb-8">
+          <a
+            href="https://www.facebook.com/nadimrijvi.shakib"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-900 text-white p-3 rounded-xl border border-gray-800 
+              hover:bg-blue-500 hover:text-gray-900 hover:border-blue-500 
+              transition-all duration-300 shadow-md hover:scale-110"
+          >
+            <BsFacebook size={18} />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/mdnadimrijvishakib/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-900 text-white p-3 rounded-xl border border-gray-800 
+              hover:bg-blue-500 hover:text-gray-900 hover:border-blue-500 
+              transition-all duration-300 shadow-md hover:scale-110"
+          >
+            <BsLinkedin size={18} />
+          </a>
+
+          <a
+            href="https://github.com/nrshakib"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-900 text-white p-3 rounded-xl border border-gray-800 
+              hover:bg-blue-500 hover:text-gray-900 hover:border-blue-500 
+              transition-all duration-300 shadow-md hover:scale-110"
+          >
+            <BsGithub size={18} />
+          </a>
+        </div>
+
+        {/* Copyright */}
+        <div className="text-sm text-gray-400 leading-relaxed">
+          <p>&copy; {new Date().getFullYear()} MD Nadim Rijvi Shakib</p>
+          <p>All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
