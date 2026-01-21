@@ -40,8 +40,21 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 lg:px-10 bg-gray-900"
+      className="relative py-16 sm:py-20 md:py-28 px-4 sm:px-6 lg:px-10 "
     >
+      {/* Animated Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          className="absolute top-16 left-8 bottom-16 right-8 w-72 h-72 sm:w-96 sm:h-96 bg-purple-500/10 rounded-full blur-3xl"
+          animate={{ scale: [1, 1.3, 1], x: [0, -40, 0], y: [0, -30, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-16 right-8 w-56 h-56 sm:w-72 sm:h-72 bg-blue-500/10 rounded-full blur-3xl"
+          animate={{ scale: [1, 1.2, 1], x: [0, 40, 0], y: [0, 30, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
       {/* Section Header */}
       <div className="text-center mb-12 sm:mb-16">
         <h5 className="text-sm sm:text-base text-gray-400 tracking-widest uppercase">
