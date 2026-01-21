@@ -1,53 +1,128 @@
-import React, { useRef } from 'react';
-import { MdEmail } from 'react-icons/md';
-import { BsMessenger, BsWhatsapp } from 'react-icons/bs';
-import emailjs from 'emailjs-com';
+import React, { useRef } from "react";
+import { MdEmail } from "react-icons/md";
+import { BsMessenger, BsWhatsapp } from "react-icons/bs";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
-    const form = useRef();
+  const form = useRef(null);
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-        emailjs.sendForm('service_pkvihgc', 'template_7ddb4c5', form.current, 'BckdQm1W2XtMPtXIq')
-
-        e.target.reset();
-    };
-
-    return (
-        <section id="contact">
-            <h5>Get In Touch</h5>
-            <h2>Contact Me</h2>
-            <div className="container w-[58%] grid grid-cols-[30%_58%] gap-[12%] md:grid-cols-1 md:gap-8 sm:w-[90%]">
-                <div className="flex flex-col gap-5">
-                    <article className="bg-[var(--color-bg-variant)] p-5 rounded-xl text-center border border-transparent transition-all duration-400 ease-in-out hover:bg-transparent hover:border-[var(--color-primary-variant)]">
-                        <MdEmail className='text-[1.5rem] mb-2 mx-auto' />
-                        <h4>Email</h4>
-                        <h5>nrshakib007@gmail.com</h5>
-                        <a href='mailto:nrshakib007@gmail.com' target='_blank' className="mt-4 inline-block text-[0.8rem] transition-all duration-400 hover:text-[1.1rem]">Send a Mail</a>
-                    </article>
-                    <article className="bg-[var(--color-bg-variant)] p-5 rounded-xl text-center border border-transparent transition-all duration-400 ease-in-out hover:bg-transparent hover:border-[var(--color-primary-variant)]">
-                        <BsMessenger className='text-[1.5rem] mb-2 mx-auto' />
-                        <h4>Messenger</h4>
-                        <h5>nrshakib</h5>
-                        <a href='https://m.me/nadimrijvi.shakib' target='_blank' className="mt-4 inline-block text-[0.8rem] transition-all duration-400 hover:text-[1.1rem]">Send Me a Message</a>
-                    </article>
-                    <article className="bg-[var(--color-bg-variant)] p-5 rounded-xl text-center border border-transparent transition-all duration-400 ease-in-out hover:bg-transparent hover:border-[var(--color-primary-variant)]">
-                        <BsWhatsapp className='text-[1.5rem] mb-2 mx-auto' />
-                        <h4>What's App</h4>
-                        <h5>NR Shakib</h5>
-                        <a href='https:wa.me/01748379372' target='_blank' className="mt-4 inline-block text-[0.8rem] transition-all duration-400 hover:text-[1.1rem]">Knock Me</a>
-                    </article>
-                </div>
-                <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
-                    <input type="text" name="name" placeholder='Your Full Name' required className="w-full p-5 rounded-lg bg-transparent border-2 border-[var(--color-primary-variant)] text-[var(--color-white)] resize-none focus:outline-none focus:border-[var(--color-primary)] placeholder-gray-400" />
-                    <input type="email" name="email" placeholder='Your Email Address' required className="w-full p-5 rounded-lg bg-transparent border-2 border-[var(--color-primary-variant)] text-[var(--color-white)] resize-none focus:outline-none focus:border-[var(--color-primary)] placeholder-gray-400" />
-                    <textarea name="message" rows="7" placeholder='Your Message' required className="w-full p-5 rounded-lg bg-transparent border-2 border-[var(--color-primary-variant)] text-[var(--color-white)] resize-none focus:outline-none focus:border-[var(--color-primary)] placeholder-gray-400"></textarea>
-                    <button type="submit" className='btn btn-primary'>Send Message</button>
-                </form>
-            </div>
-        </section>
+    emailjs.sendForm(
+      "service_pkvihgc",
+      "template_7ddb4c5",
+      form.current,
+      "BckdQm1W2XtMPtXIq",
     );
+
+    e.target.reset();
+  };
+
+  return (
+    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-10 bg-gray-900">
+      {/* Section Header */}
+      <div className="text-center mb-14">
+        <h5 className="text-sm uppercase tracking-widest text-gray-400">
+          Get In Touch
+        </h5>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-500 mt-2">
+          Contact Me
+        </h2>
+      </div>
+
+      {/* Content */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+        {/* Contact Options */}
+        <div className="flex flex-col gap-6">
+          {/* Email */}
+          <article className="bg-gray-800/40 backdrop-blur-lg p-6 rounded-2xl text-center border border-transparent hover:border-blue-500/40 transition shadow-lg">
+            <MdEmail className="text-3xl text-yellow-500 mx-auto mb-3" />
+            <h4 className="text-lg font-semibold text-white">Email</h4>
+            <h5 className="text-sm text-gray-400">
+              nadimrijvi.shakib@gmail.com
+            </h5>
+            <a
+              href="mailto:nadimrijvi.shakib@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm text-yellow-400 hover:text-blue-300 transition"
+            >
+              Send a Mail →
+            </a>
+          </article>
+
+          {/* Messenger */}
+          <article className="bg-gray-800/40 backdrop-blur-lg p-6 rounded-2xl text-center border border-transparent hover:border-blue-500/40 transition shadow-lg">
+            <BsMessenger className="text-3xl text-blue-500 mx-auto mb-3" />
+            <h4 className="text-lg font-semibold text-white">Messenger</h4>
+            <h5 className="text-sm text-gray-400">nrshakib</h5>
+            <a
+              href="https://m.me/nadimrijvi.shakib"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm text-blue-400 hover:text-blue-300 transition"
+            >
+              Send Message →
+            </a>
+          </article>
+
+          {/* WhatsApp */}
+          <article className="bg-gray-800/40 backdrop-blur-lg p-6 rounded-2xl text-center border border-transparent hover:border-blue-500/40 transition shadow-lg">
+            <BsWhatsapp className="text-3xl text-green-500 mx-auto mb-3" />
+            <h4 className="text-lg font-semibold text-white">WhatsApp</h4>
+            <h5 className="text-sm text-gray-400">NR Shakib</h5>
+            <a
+              href="https://wa.me/01748379372"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm text-green-400 hover:text-blue-300 transition"
+            >
+              Knock Me →
+            </a>
+          </article>
+        </div>
+
+        {/* Contact Form */}
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="bg-gray-800/40 backdrop-blur-lg p-2 sm:p-8 rounded-2xl border border-gray-700 shadow-lg flex flex-col gap-5"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Full Name"
+            required
+            className="w-full p-4 rounded-lg bg-gray-900 text-white border border-gray-700 focus:border-blue-500 focus:outline-none placeholder-gray-400"
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email Address"
+            required
+            className="w-full p-4 rounded-lg bg-gray-900 text-white border border-gray-700 focus:border-blue-500 focus:outline-none placeholder-gray-400"
+          />
+
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Your Message"
+            required
+            className="w-full p-4 rounded-lg bg-gray-900 text-white border border-gray-700 focus:border-blue-500 focus:outline-none resize-none placeholder-gray-400"
+          />
+
+          <button
+            type="submit"
+            className="mt-2 bg-blue-500 text-gray-100 font-medium px-6 py-3 rounded-lg hover:bg-blue-400 transition shadow-md cursor-pointer"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+  );
 };
 
 export default Contact;
