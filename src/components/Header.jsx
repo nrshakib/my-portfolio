@@ -1,5 +1,5 @@
-import Action from "./Action";
-import Me from "../../../public/resources/images/me.png";
+import HeaderAction from "./HeaderAction";
+import Me from "../../public/resources/images/me.png"; // Adjusted path likely needed if it was ../../../
 import HeaderSocial from "./HeaderSocial";
 import { Link } from "react-router-dom";
 import { FaArrowDown } from "react-icons/fa";
@@ -51,6 +51,7 @@ const Header = () => {
               "k",
               "i",
               "b",
+              "k",
             ].map((letter, index) => (
               <motion.span
                 key={index}
@@ -80,7 +81,7 @@ const Header = () => {
 
         {/* Action Buttons and Image Section */}
         <div className="flex gap-8 items-center justify-center">
-          <Action />
+          <HeaderAction />
           {/* <div className="mt-10 flex gap-5 justify-center items-start"></div> */}
           {/* <div className="w-full sm:w-[200px] h-[250px] mt-16 rounded-xl">
             <img
