@@ -6,9 +6,9 @@ import { HeroSocial } from "./HeroSocial";
 export const Hero = () => {
   return (
     <header
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden
+      className="relative min-h-[92vh] w-full flex items-center justify-center overflow-hidden
       px-4 sm:px-6 md:px-10 lg:px-16
-      py-16 sm:py-20 md:py-28"
+      py-10 sm:py-5"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -34,7 +34,7 @@ export const Hero = () => {
         <div className="flex flex-col items-center gap-5 sm:gap-6 md:gap-8">
           {/* Greeting */}
           <motion.p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 font-light"
+            className="text-base md:text-lg lg:text-xl text-gray-200 font-light"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -88,7 +88,7 @@ export const Hero = () => {
           {/* Tagline */}
           <motion.p
             className="max-w-xs sm:max-w-md md:max-w-2xl
-              text-sm sm:text-base md:text-lg text-gray-400 px-2 sm:px-0"
+              text-sm sm:text-base md:text-lg text-gray-400 px-2 sm:px-0 italic"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}

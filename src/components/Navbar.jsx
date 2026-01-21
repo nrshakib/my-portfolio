@@ -20,7 +20,7 @@ export const Navbar = () => {
   const [active, setActive] = useState("#");
 
   return (
-    <div className="fixed bottom-4 sm:bottom-10 left-0 right-0 z-50 flex justify-center items-center px-4">
+    <div className="fixed bottom-4 sm:bottom-10 left-0 right-0 z-50 flex justify-center items-center">
       {/* NAVBAR */}
       <motion.div
         initial={{ y: 60, opacity: 0, scale: 0.9 }}
@@ -38,7 +38,7 @@ export const Navbar = () => {
           boxShadow:
             "0 20px 60px rgba(0, 0, 0, 0.5), 0 0 1px rgba(255, 255, 255, 0.1) inset",
         }}
-        className="pointer-events-auto flex gap-1 sm:gap-3 py-3 px-3 sm:py-4 sm:px-8 md:px-10 rounded-full backdrop-blur-[50px] w-[90%] sm:w-[80%] lg:w-[60%] max-w-xl justify-between sm:justify-around"
+        className="pointer-events-auto flex gap-1 sm:gap-3 py-2 px-3 md:px-5 rounded-full backdrop-blur-[50px] w-[90%] sm:w-[80%] lg:w-[60%] max-w-xl justify-between sm:justify-around"
       >
         {navItems.map(({ href, icon }, index) => {
           const isActive = active === href;
@@ -71,11 +71,11 @@ export const Navbar = () => {
                 sx={{
                   position: "relative",
                   fontSize: {
-                    xs: "1rem",
-                    sm: "1.25rem",
-                    md: "1.8rem",
-                    lg: "2.1rem",
-                    xl: "2.5rem",
+                    xs: "14px",
+                    sm: "16px",
+                    md: "20px",
+                    lg: "24px",
+                    xl: "28px",
                   },
                   color: isActive ? "#fff" : "rgba(255,255,255,0.7)",
                   padding: { xs: "8px", sm: "12px", md: "14px" },
