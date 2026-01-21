@@ -11,8 +11,8 @@ const navItems = [
   { href: "#", icon: <AiOutlineHome /> },
   { href: "#about", icon: <AiOutlineUser /> },
   { href: "#experience", icon: <BiBook /> },
-  { href: "#services", icon: <RiServiceLine /> },
   { href: "#portfolio", icon: <FiBox /> },
+  { href: "#services", icon: <RiServiceLine /> },
   { href: "#contact", icon: <BiMessageSquareDetail /> },
 ];
 
