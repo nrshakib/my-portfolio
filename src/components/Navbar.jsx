@@ -20,7 +20,7 @@ export const Navbar = () => {
   const [active, setActive] = useState("#");
 
   return (
-    <div className="fixed bottom-4 sm:bottom-10 left-0 right-0 z-50 flex justify-center items-center">
+    <div className="fixed bottom-4 sm:bottom-10 left-0 right-0 z-50 flex justify-center items-center w-[95%] sm:w-[80%] lg:w-[60%] max-w-xl mx-auto pb-[env(safe-area-inset-bottom)]">
       {/* NAVBAR */}
       <motion.div
         initial={{ y: 60, opacity: 0, scale: 0.9 }}
@@ -38,7 +38,7 @@ export const Navbar = () => {
           boxShadow:
             "0 20px 60px rgba(0, 0, 0, 0.5), 0 0 1px rgba(255, 255, 255, 0.1) inset",
         }}
-        className="pointer-events-auto flex gap-1 sm:gap-3 py-2 px-3 md:px-5 rounded-full backdrop-blur-[50px] w-[90%] sm:w-[80%] lg:w-[60%] max-w-xl justify-between sm:justify-around"
+        className="pointer-events-auto flex gap-1 sm:gap-3 py-2 px-3 md:px-5 rounded-full backdrop-blur-[50px] justify-between sm:justify-around w-full"
       >
         {navItems.map(({ href, icon }, index) => {
           const isActive = active === href;
@@ -71,16 +71,15 @@ export const Navbar = () => {
                 sx={{
                   position: "relative",
                   fontSize: {
-                    xs: "14px",
-                    sm: "16px",
-                    md: "20px",
-                    lg: "24px",
-                    xl: "28px",
+                    xs: "18px", // Slightly larger for better touch target
+                    sm: "20px",
+                    md: "24px",
+                    lg: "28px",
                   },
                   color: isActive ? "#fff" : "rgba(255,255,255,0.7)",
-                  padding: { xs: "8px", sm: "12px", md: "14px" },
-                  minWidth: { xs: "40px", sm: "48px" },
-                  minHeight: { xs: "40px", sm: "48px" },
+                  padding: { xs: "10px", sm: "12px", md: "14px" }, // Adjusted padding
+                  minWidth: { xs: "44px", sm: "48px" }, // Minimum touch target size
+                  minHeight: { xs: "44px", sm: "48px" },
                   transition: "color 0.3s ease",
                   "&:hover": {
                     color: "#fff",
@@ -107,7 +106,7 @@ export const Navbar = () => {
                   />
                 )}
 
-                {/* Glow effect on hover - hidden on mobile for performance */}
+                {/* Glow effect on hover - hidden on mobile via CSS */}
                 <motion.span
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 0.2 }}
@@ -120,8 +119,8 @@ export const Navbar = () => {
                       "radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)",
                     zIndex: -2,
                     pointerEvents: "none",
-                    display: window.innerWidth < 640 ? "none" : "block",
                   }}
+                  className="hidden sm:block"
                 />
 
                 {icon}

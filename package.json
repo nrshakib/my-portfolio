@@ -11,6 +11,7 @@
     "@tailwindcss/vite": "^4.1.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^13.5.0",
+    "dayjs": "^1.11.19",
     "emailjs-com": "^3.2.0",
     "motion": "^12.22.0",
     "react": "^19.1.0",

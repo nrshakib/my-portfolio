@@ -95,10 +95,10 @@ export default function Skills() {
             marginBottom: "3rem",
             "& .MuiTabs-root": {
               background: "rgba(55, 55, 120, 0.3)",
-              borderRadius: "40px",
-              padding: "0.3rem",
+              borderRadius: "10px",
+              padding: "5px",
               backdropFilter: "blur(12px)",
-              border: "1px solid rgba(77, 181, 255, 0.2)",
+              // border: "1px solid rgba(77, 181, 255, 0.2)",
             },
           }}
         >
@@ -110,7 +110,7 @@ export default function Skills() {
             TabIndicatorProps={{
               style: {
                 height: "100%",
-                borderRadius: "40px",
+                borderRadius: "10px",
                 backgroundColor: "#4db5ff",
                 zIndex: 0,
                 opacity: 0.15,
@@ -119,10 +119,10 @@ export default function Skills() {
             sx={{
               "& .MuiTab-root": {
                 color: "rgba(255,255,255,0.7)",
-                fontSize: { xs: "0.85rem", sm: "1rem" },
+                fontSize: { xs: "12px", sm: "14px" },
                 textTransform: "capitalize",
                 fontWeight: 500,
-                borderRadius: "40px",
+                borderRadius: "10px",
                 minWidth: { xs: "100px", sm: "140px" },
                 zIndex: 1,
                 transition: "all 0.3s ease",

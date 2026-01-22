@@ -9,7 +9,7 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className=" bg-[#1f1f38]">
+    <div className="bg-[#1f1f38] overflow-x-hidden">
       <Hero />
       <Navbar />
       <About />
