@@ -1,143 +1,109 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { MdOutlineMoreTime } from "react-icons/md";
 import { SiExpertsexchange } from "react-icons/si";
-import { BsFolderCheck } from "react-icons/bs";
 import { motion } from "framer-motion";
-import dayjs from "dayjs";
-import duration from "dayjs/plugin/duration";
-
-dayjs.extend(duration);
 
 const About = () => {
-  const [experience, setExperience] = useState({
-    years: 0,
-    months: 0,
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+        ease: "easeOut",
+      },
+    },
+  };
 
-  useEffect(() => {
-    const calculateExperience = () => {
-      const startDate = dayjs("2024-06-01");
-      const today = dayjs();
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "tween",
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
 
-      const diffMs = today.diff(startDate);
-      const dur = dayjs.duration(diffMs);
+  const hoverCard = {
+    y: -8,
+    scale: 1.04,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 17,
+    },
+  };
 
-      setExperience({
-        years: dur.years(),
-        months: dur.months(),
-        days: dur.days(),
-        hours: dur.hours(),
-        minutes: dur.minutes(),
-        seconds: dur.seconds(),
-      });
-    };
+  const floatBlob = {
+    scale: [1, 1.4, 1],
+    x: [0, -50, 0],
+    y: [0, -40, 0],
+    transition: {
+      duration: 14,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  };
 
-    // Calculate immediately
-    calculateExperience();
+  const floatBlobSecondary = {
+    scale: [1, 1.3, 1],
+    x: [0, 60, 0],
+    y: [0, 50, 0],
+    transition: {
+      duration: 12,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  };
 
-    // Update every second
-    const interval = setInterval(calculateExperience, 1000);
+  const currentExperience = {
+    role: "Front End Developer",
+    company: "Dynamic Development Team",
+    period: "April 2026 - Present",
+    description:
+      "Contributing to fast-paced, long-running product delivery with modern frontend workflows. Debugging complex UI issues, integrating APIs, and improve system reliability.",
+  };
 
-    return () => clearInterval(interval);
-  }, []);
+  const previousExperience = {
+    role: "Front End Developer",
+    company: "Spark Tech Agency",
+    period: "June 2024 - April 2026",
+    description:
+      "Built responsive UIs and polished user experiences for web products. Participated in the full development lifecycle, from UI design and state management to API integration and performance optimization.",
+  };
+
+  const expertiseItems = [
+    "Front End Development",
+    "React.js & Next.js",
+    "Responsive UI/UX",
+    "API Integration",
+    "State Management",
+    "Performance Optimization",
+  ];
 
   const cards = [
     {
       icon: <MdOutlineMoreTime />,
-      title: "Experience",
-      subtitle: (
-        <div className="flex flex-col items-center gap-1 mt-2">
-          <div className="flex gap-1">
-            <motion.span
-              key={`y-${experience.years}`}
-              initial={{ scale: 1.3, color: "#32CD32" }}
-              animate={{ scale: 1, color: "#fff" }}
-              transition={{ duration: 0.3 }}
-              className="bg-gray-900 px-2 py-1 rounded text-xs font-mono font-bold"
-            >
-              {experience.years}Y
-            </motion.span>{" "}
-            <span className="text-[#37af37] font-bold">:</span>
-            <motion.span
-              key={`m-${experience.months}`}
-              initial={{ scale: 1.3, color: "#32CD32" }}
-              animate={{ scale: 1, color: "#fff" }}
-              transition={{ duration: 0.3 }}
-              className="bg-gray-900 px-2 py-1 rounded text-xs font-mono font-bold"
-            >
-              {experience.months}M
-            </motion.span>{" "}
-            <span className="text-[#37af37] font-bold">:</span>
-            <motion.span
-              key={`d-${experience.days}`}
-              initial={{ scale: 1.3, color: "#32CD32" }}
-              animate={{ scale: 1, color: "#fff" }}
-              transition={{ duration: 0.3 }}
-              className="bg-gray-900 px-2 py-1 rounded text-xs font-mono font-bold"
-            >
-              {experience.days}D
-            </motion.span>{" "}
-            <span className="text-[#37af37] font-bold">-</span>
-            <motion.span
-              key={`h-${experience.hours}`}
-              initial={{ scale: 1.3, color: "#32CD32" }}
-              animate={{ scale: 1, color: "#fff" }}
-              transition={{ duration: 0.3 }}
-              className="bg-gray-900 px-2 py-1 rounded text-sm font-mono font-bold"
-            >
-              {String(experience.hours).padStart(2, "0")}
-            </motion.span>
-            <span className="text-[#37af37] font-bold">:</span>
-            <motion.span
-              key={`min-${experience.minutes}`}
-              initial={{ scale: 1.3, color: "#32CD32" }}
-              animate={{ scale: 1, color: "#fff" }}
-              transition={{ duration: 0.3 }}
-              className="bg-gray-900 px-2 py-1 rounded text-sm font-mono font-bold"
-            >
-              {String(experience.minutes).padStart(2, "0")}
-            </motion.span>
-            <span className="text-[#37af37] font-bold">:</span>
-            <motion.span
-              key={`s-${experience.seconds}`}
-              initial={{ scale: 1.3, color: "#32CD32" }}
-              animate={{ scale: 1, color: "#fff" }}
-              transition={{ duration: 0.3 }}
-              className="bg-gray-900 px-2 py-1 rounded text-sm font-mono font-bold"
-            >
-              {String(experience.seconds).padStart(2, "0")}
-            </motion.span>
-          </div>
-        </div>
-      ),
-      extra: (
-        <>
-          <span className="block mt-2 text-sm text-gray-400">
-            as{" "}
-            <span className="text-white font-semibold">
-              Front End Developer
-            </span>
-          </span>
-          <span className="block text-sm text-gray-400">
-            at{" "}
-            <span className="text-white font-semibold">Spark Tech Agency</span>
-          </span>
-        </>
-      ),
+      title: "Current Experience",
+      item: currentExperience,
+      accent: "from-blue-500/20 to-cyan-500/10",
+    },
+    {
+      icon: <MdOutlineMoreTime />,
+      title: "Previous Experience",
+      item: previousExperience,
+      accent: "from-purple-500/20 to-pink-500/10",
     },
     {
       icon: <SiExpertsexchange />,
       title: "Expertise On",
-      subtitle: "Front End Development",
-    },
-    {
-      icon: <BsFolderCheck />,
-      title: "Projects",
-      subtitle: "10+ Hands On Projects",
+      items: expertiseItems,
+      accent: "from-emerald-500/20 to-green-500/10",
     },
   ];
 
@@ -150,92 +116,186 @@ const About = () => {
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           className="absolute top-16 left-8 bottom-16 right-8 w-72 h-72 sm:w-96 sm:h-96 bg-purple-500/10 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.3, 1], x: [0, -40, 0], y: [0, -30, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          animate={floatBlob}
         />
         <motion.div
           className="absolute bottom-16 right-8 w-56 h-56 sm:w-72 sm:h-72 bg-blue-500/10 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.2, 1], x: [0, 40, 0], y: [0, 30, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          animate={floatBlobSecondary}
         />
       </div>
       {/* Section Header */}
-      <div className="text-center mb-12 sm:mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="text-center mb-12 sm:mb-16"
+      >
         <h5 className="text-sm sm:text-base text-gray-400 tracking-widest uppercase">
           Get To Know
         </h5>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-blue-500">
           About Me
         </h2>
-      </div>
+      </motion.div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 gap-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 gap-16">
         {/* Info Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {cards.map((card, index) => (
             <motion.article
               key={index}
-              whileHover={{ y: -5, scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-              className="group bg-gray-800 rounded-2xl p-6 sm:p-8 text-center
-                border border-transparent shadow-md hover:shadow-xl 
-                hover:border-blue-500 cursor-pointer transition-all duration-300"
+              variants={fadeInUp}
+              whileHover={hoverCard}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className={`group relative overflow-hidden rounded-2xl p-6 sm:p-8 text-center border border-gray-700/70 shadow-md hover:shadow-2xl hover:shadow-blue-500/20 hover:border-blue-500/60 transition-all duration-300 backdrop-blur-sm ${card.accent}`}
             >
-              <div className="text-blue-500 text-4xl mx-auto group-hover:scale-110 transition-transform">
-                {card.icon}
+              <div className="absolute inset-0 bg-gradient-to-br opacity-70" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-tr from-transparent via-blue-500/5 to-transparent" />
+              <div className="relative z-10">
+                <div className="flex items-center gap-3">
+                  <motion.div
+                    whileHover={{ rotate: 15, scale: 1.2 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    className="text-blue-500 text-4xl group-hover:scale-110 transition-transform shrink-0"
+                  >
+                    {card.icon}
+                  </motion.div>
+                  <h5 className="text-base sm:text-lg font-semibold text-white">
+                    {card.title}
+                  </h5>
+                </div>
+
+                {card.title === "Expertise On" ? (
+                  <div className="mt-3 flex flex-wrap justify-center gap-2">
+                    {card.items.map((item, itemIndex) => (
+                      <motion.span
+                        key={itemIndex}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: itemIndex * 0.05, duration: 0.4 }}
+                        whileHover={{ scale: 1.08, y: -2 }}
+                        className="rounded-full bg-gray-900/80 px-3 py-1 text-xs font-medium text-gray-300 border border-gray-700 hover:border-blue-500/50 hover:text-white transition-all duration-200 cursor-default"
+                      >
+                        {item}
+                      </motion.span>
+                    ))}
+                  </div>
+                ) : (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="mt-3 rounded-xl border border-gray-700/70 bg-gray-900/70 px-3 py-3 text-left backdrop-blur-md"
+                  >
+                    <p className="text-base font-semibold text-white">
+                      {card.item.role}
+                    </p>
+                    <p className="text-[12px] uppercase tracking-[0.2em] text-blue-400 mt-1">
+                      {card.item.company}
+                    </p>
+                    <p className="text-xs text-yellow-500 mt-1">
+                      {card.item.period}
+                    </p>
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
+                      className="text-xs text-gray-400 mt-2 leading-relaxed"
+                    >
+                      {card.item.description}
+                    </motion.p>
+                  </motion.div>
+                )}
               </div>
-              <h5 className="text-base sm:text-lg font-semibold mb-1 text-white">
-                {card.title}
-              </h5>
-              {typeof card.subtitle === "string" ? (
-                <small className="text-xs sm:text-sm text-gray-400">
-                  {card.subtitle}
-                </small>
-              ) : (
-                card.subtitle
-              )}
-              {card.extra && <div className="mt-2 text-sm">{card.extra}</div>}
             </motion.article>
           ))}
-        </div>
+        </motion.div>
 
         {/* Description */}
-        <div className="max-w-4xl mx-auto text-center lg:text-justify">
-          <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="max-w-4xl mx-auto text-center lg:text-justify"
+        >
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
             I'm a{" "}
-            <span className="font-semibold text-white hover:text-gray-300 transition-colors">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="font-semibold text-white hover:text-gray-300 transition-colors"
+            >
               Front End Developer
-            </span>{" "}
+            </motion.span>{" "}
             with hands-on experience building modern user interfaces using{" "}
             <span className="text-gray-300 font-semibold">
               JavaScript, ReactJS, NextJS, TailwindCSS, Material UI, Ant Design,
-              RTK Query
+              RTK Query, and API Integration
             </span>
             . I graduated in{" "}
-            <span className="font-semibold text-white hover:text-gray-300 transition-colors">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="font-semibold text-white hover:text-gray-300 transition-colors"
+            >
               Computer Science and Engineering
-            </span>{" "}
+            </motion.span>{" "}
             and currently focusing on{" "}
-            <span className="font-semibold group cursor-pointer">
-              <span className="group-hover:text-green-400">M</span>
-              <span className="group-hover:text-white">E</span>
-              <span className="group-hover:text-cyan-400">R</span>
-              <span className="group-hover:text-green-600">N</span> Stack Web
-              Development
-            </span>
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="font-semibold group cursor-pointer"
+            >
+              <span className="group-hover:text-green-400 transition-colors duration-200">
+                M
+              </span>
+              <span className="group-hover:text-white transition-colors duration-200">
+                E
+              </span>
+              <span className="group-hover:text-cyan-400 transition-colors duration-200">
+                R
+              </span>
+              <span className="group-hover:text-green-600 transition-colors duration-200">
+                N
+              </span>{" "}
+              <span className="group-hover:text-white transition-colors duration-200">
+                Stack Web Development
+              </span>
+            </motion.span>
             .
           </p>
 
           {/* CTA */}
-          <div className="mt-8 flex justify-center lg:justify-start">
-            <a
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="mt-8 flex justify-center lg:justify-start"
+          >
+            <motion.a
               href="#contact"
-              className="bg-blue-500 text-white px-8 py-3 rounded-md font-medium shadow-lg hover:shadow-xl transition-all hover:scale-110 duration-300"
+              whileHover={{ scale: 1.08, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="relative bg-blue-500 text-white px-8 py-3 rounded-md font-medium shadow-lg hover:shadow-blue-500/40 transition-all duration-300 overflow-hidden group"
             >
-              Let's Talk
-            </a>
-          </div>
-        </div>
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              <span className="relative z-10">Let's Talk</span>
+            </motion.a>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
