@@ -63,10 +63,10 @@ const About = () => {
 
   const currentExperience = {
     role: "Front End Developer",
-    company: "Dynamic Development Team",
-    period: "April 2026 - Present",
+    company: "Remote Development Team",
+    period: "April 2026 - July 2026",
     description:
-      "Contributing to fast-paced, long-running product delivery with modern frontend workflows. Debugging complex UI issues, integrating APIs, and improve system reliability.",
+      "Contributed to fast-paced, long-running product delivery with modern frontend workflows. Debugging complex UI issues, integrating APIs, and improve system reliability.",
   };
 
   const previousExperience = {
@@ -89,7 +89,7 @@ const About = () => {
   const cards = [
     {
       icon: <MdOutlineMoreTime />,
-      title: "Current Experience",
+      title: "Recent Experience",
       item: currentExperience,
       accent: "from-blue-500/20 to-cyan-500/10",
     },

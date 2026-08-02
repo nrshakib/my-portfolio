@@ -20,7 +20,7 @@ const skillsData = {
     "Ant Design",
     "Responsive Web Design",
   ],
-  "State & Data Handling": ["RTK Query", "Axios", "REST APIs"],
+  "State & Data Handling": ["RTK Query", "Axios", "REST APIs", "Context API"],
   "Programming Language": ["JavaScript", "Python"],
 };
 
