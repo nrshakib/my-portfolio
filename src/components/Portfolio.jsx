@@ -10,16 +10,19 @@ import teasForCause from "../../public/resources/images/portfolio/teas-for-cause
 import cityTemperature from "../../public/resources/images/portfolio/temperature app.jpg";
 import ticketBooking from "../../public/resources/images/portfolio/ticket-booking.png";
 import youtJewel from "../../public/resources/images/portfolio/your-jewel.png";
+import HealthcareBooking from "../../public/resources/images/portfolio/Healthcare-booking.png";
 
 const data = [
   {
     id: 1,
-    image: chickshot,
-    title: "Photo Generator Website",
-    live: "https://yannick-ai-photo-generator-website.vercel.app/",
+    image: HealthcareBooking,
+    title: "Doctor Booking System Website",
+    live: "https://medicare-healthcare-appointment-system.vercel.app/",
     contribution: [
-      "Developed the entire front-end using NextJs and Tailwind CSS.",
+      "Developed the entire front-end using NextJs and Tailwind CSS , and Material UI.",
       "Ensured a fully responsive and user-friendly interface.",
+      "Implemented smooth animations using Framer Motion.",
+      "Optimized for responsive and interactive user experience.",
     ],
   },
   {
@@ -35,6 +38,17 @@ const data = [
   },
   {
     id: 3,
+    image: chickshot,
+    title: "Photo Generator Website",
+    live: "https://yannick-ai-photo-generator-website.vercel.app/",
+    contribution: [
+      "Developed the entire front-end using NextJs and Tailwind CSS.",
+      "Ensured a fully responsive and user-friendly interface.",
+    ],
+  },
+
+  {
+    id: 4,
     image: youtJewel,
     title: "E-commerce Site with API Integration",
     live: "https://your-jewel.com/",
@@ -45,7 +59,7 @@ const data = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     image: ticketBooking,
     title: "Ticket Booking Website",
     live: "https://adrien-ticket-booking-website.vercel.app/",
@@ -56,7 +70,7 @@ const data = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     image: teasForCause,
     title: "Teas For Cause E-commerce",
     live: "https://teas-for-cause.vercel.app/",
@@ -67,7 +81,7 @@ const data = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     image: restaurant,
     title: "Restaurant Website",
     live: "https://nrshakib.github.io/restaurant-website-react/",
@@ -77,7 +91,7 @@ const data = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     image: cityTemperature,
     title: "City Temperature App",
     live: "https://nrshakib.github.io/city-temperature/",
@@ -115,10 +129,10 @@ const PortfolioCard = ({ image, title, live, contribution }) => {
 
       <div className="p-5">
         <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-        
+
         <div className="flex flex-wrap gap-3 mb-4">
-           {/* Action Buttons */}
-           <a
+          {/* Action Buttons */}
+          <a
             href={live}
             target="_blank"
             rel="noopener noreferrer"
@@ -126,12 +140,12 @@ const PortfolioCard = ({ image, title, live, contribution }) => {
           >
             Live Demo <FiExternalLink />
           </a>
-          
+
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border transition-colors ${
-              isOpen 
-                ? "bg-white/10 border-white/20 text-white" 
+              isOpen
+                ? "bg-white/10 border-white/20 text-white"
                 : "border-white/10 text-gray-300 hover:bg-white/5 hover:text-white"
             }`}
           >
@@ -155,22 +169,23 @@ const PortfolioCard = ({ image, title, live, contribution }) => {
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <div className="pt-4 border-t border-white/10">
-                <h4 className="text-sm uppercase tracking-wider text-blue-400 font-semibold mb-3">
-                  My key contributions:
+                <h4 className="text-sm tracking-wider text-blue-300 font-semibold mb-3">
+                  My Key Contributions:
                 </h4>
                 <ul className="space-y-3">
-                  {contribution && contribution.map((item, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex gap-3 text-sm text-gray-300 leading-relaxed"
-                    >
-                      <BsCheckCircleFill className="text-blue-500 mt-1 shrink-0 text-xs" />
-                      <span>{item}</span>
-                    </motion.li>
-                  ))}
+                  {contribution &&
+                    contribution.map((item, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex gap-3 text-sm text-gray-300 leading-relaxed"
+                      >
+                        <BsCheckCircleFill className="text-blue-500 mt-1 shrink-0 text-xs" />
+                        <span>{item}</span>
+                      </motion.li>
+                    ))}
                 </ul>
               </div>
             </motion.div>
@@ -183,7 +198,10 @@ const PortfolioCard = ({ image, title, live, contribution }) => {
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 px-4 sm:px-6 lg:px-10 bg-gray-900/50">
+    <section
+      id="portfolio"
+      className="py-24 px-4 sm:px-6 lg:px-10 bg-gray-900/50"
+    >
       <div className="text-center mb-16">
         <h5 className="text-gray-400 uppercase tracking-widest text-sm font-medium mb-2">
           My Recent Work

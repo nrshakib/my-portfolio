@@ -45,8 +45,8 @@ export const Hero = () => {
           {/* Name */}
           <motion.h1
             className="font-bold leading-tight
-              text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
-              bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+              text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+              bg-gradient-to-r from-blue-400 to-purple-400
               bg-clip-text text-transparent"
             style={{ fontFamily: "Quicksand, sans-serif" }}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -77,12 +77,12 @@ export const Hero = () => {
 
           {/* Role */}
           <motion.h2
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-light tracking-wide"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-normal tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
           >
-            Front End Developer
+            Web Front End Developer
           </motion.h2>
 
           {/* Tagline */}
