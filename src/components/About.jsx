@@ -227,19 +227,19 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="max-w-4xl mx-auto text-center lg:text-justify"
+          className="max-w-4xl mx-auto text-left lg:text-center lg:text-justify"
         >
           <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
             I'm a{" "}
             <motion.span
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="font-semibold text-transparent bg-clip-text bg-blue-300 text-2xl"
+              className="font-semibold text-transparent bg-clip-text bg-blue-300 text-lg sm:text-xl lg:text-2xl"
             >
               Front End Developer
             </motion.span>{" "}
             with hands-on experience building modern user interfaces using{" "}
-            <span className="text-green-400 font-semibold text-xl">
+            <span className="text-emerald-500 font-semibold text-lg sm:text-xl lg:text-2xl">
               JavaScript, ReactJS, NextJS, TailwindCSS, Material UI, Ant Design,
               RTK Query, and API Integration
             </span>
@@ -255,7 +255,7 @@ const About = () => {
             <motion.span
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="font-semibold text-xl text-transparent bg-clip-text bg-yellow-500"
+              className="font-semibold text-lg sm:text-xl lg:text-2xl text-transparent bg-clip-text bg-yellow-500"
             >
               Python &amp; Django
             </motion.span>{" "}
