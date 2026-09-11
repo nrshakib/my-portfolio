@@ -9,9 +9,9 @@ export const Hero = () => {
 
   return (
     <header
-      className="relative min-h-[92vh] w-full flex items-center justify-center overflow-hidden
+      className="relative min-h-[80vh] sm:min-h-[92vh] 2xl:min-h-[50vh] w-full flex items-center justify-center overflow-hidden
       px-4 sm:px-6 md:px-10 lg:px-16
-      py-10 sm:py-5"
+      py-5 sm:py-5"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -47,7 +47,7 @@ export const Hero = () => {
 
           {/* Name */}
           <motion.h1
-            className="font-bold leading-tight text-2xl sm:text-4xl md:text-5xl lg:text-6xl
+            className="font-bold leading-tight text-2xl sm:text-4xl lg:text-5xl
                        overflow-hidden whitespace-nowrap"
             style={{ fontFamily: "Quicksand, sans-serif" }}
             initial={{ width: "0ch" }}
