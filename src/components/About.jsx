@@ -72,7 +72,7 @@ const About = () => {
   const previousExperience = {
     role: "Front End Developer",
     company: "Spark Tech Agency",
-    period: "June 2024 - April 2026",
+    period: "June 2024 - March 2026",
     description:
       "Built responsive UIs and polished user experiences for web products. Participated in the full development lifecycle, from UI design and state management to API integration and performance optimization.",
   };
