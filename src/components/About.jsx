@@ -234,20 +234,20 @@ const About = () => {
             <motion.span
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="font-semibold text-white hover:text-gray-300 transition-colors"
+              className="font-semibold text-transparent bg-clip-text bg-blue-300 text-2xl"
             >
               Front End Developer
             </motion.span>{" "}
             with hands-on experience building modern user interfaces using{" "}
-            <span className="text-gray-300 font-semibold">
+            <span className="text-green-400 font-semibold text-xl">
               JavaScript, ReactJS, NextJS, TailwindCSS, Material UI, Ant Design,
               RTK Query, and API Integration
             </span>
-            . I graduated in{" "}
+            . I'm a graduate in{" "}
             <motion.span
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="font-semibold text-white hover:text-gray-300 transition-colors"
+              className="font-semibold text-transparent bg-clip-text bg-cyan-400"
             >
               Computer Science and Engineering
             </motion.span>{" "}
@@ -255,25 +255,11 @@ const About = () => {
             <motion.span
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="font-semibold group cursor-pointer"
+              className="font-semibold text-xl text-transparent bg-clip-text bg-yellow-500"
             >
-              <span className="group-hover:text-green-400 transition-colors duration-200">
-                M
-              </span>
-              <span className="group-hover:text-white transition-colors duration-200">
-                E
-              </span>
-              <span className="group-hover:text-cyan-400 transition-colors duration-200">
-                R
-              </span>
-              <span className="group-hover:text-green-600 transition-colors duration-200">
-                N
-              </span>{" "}
-              <span className="group-hover:text-white transition-colors duration-200">
-                Stack Web Development
-              </span>
-            </motion.span>
-            .
+              Python &amp; Django
+            </motion.span>{" "}
+            for Backend technology.
           </p>
 
           {/* CTA */}
@@ -281,7 +267,7 @@ const About = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            transition={{ delay: 0.1, duration: 0.3 }}
             className="mt-8 flex justify-center lg:justify-start"
           >
             <motion.a
@@ -289,7 +275,7 @@ const About = () => {
               whileHover={{ scale: 1.08, y: -2 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="relative bg-blue-500 text-white px-8 py-3 rounded-md font-medium shadow-lg hover:shadow-blue-500/40 transition-all duration-300 overflow-hidden group"
+              className="relative bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-md font-medium shadow-lg hover:shadow-purple-500/40 transition-all duration-300 overflow-hidden group"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <span className="relative z-10">Let's Talk</span>

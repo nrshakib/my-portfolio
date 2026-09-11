@@ -4,6 +4,9 @@ import { HeroAction } from "./HeroAction";
 import { HeroSocial } from "./HeroSocial";
 
 export const Hero = () => {
+  const name = "MD Nadim Rijvi Shakib";
+  const steps = Array.from({ length: name.length + 1 }, (_, i) => `${i}ch`);
+
   return (
     <header
       className="relative min-h-[92vh] w-full flex items-center justify-center overflow-hidden
@@ -31,7 +34,7 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center">
-        <div className="flex flex-col items-center gap-5 sm:gap-6 md:gap-8">
+        <div className="flex flex-col items-center gap-5 sm:gap-6 md:gap-8 w-full">
           {/* Greeting */}
           <motion.p
             className="text-base md:text-lg lg:text-xl text-gray-200 font-light"
@@ -44,26 +47,24 @@ export const Hero = () => {
 
           {/* Name */}
           <motion.h1
-            className="font-bold leading-tight
-              text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
-              bg-gradient-to-r from-blue-400 to-purple-400
-              bg-clip-text text-transparent"
+            className="font-bold leading-tight text-2xl sm:text-4xl md:text-5xl lg:text-6xl
+                       overflow-hidden whitespace-nowrap"
             style={{ fontFamily: "Quicksand, sans-serif" }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ width: "0ch" }}
+            animate={{ width: steps }}
+            transition={{
+              duration: name.length * 0.15,
+              delay: 0.9,
+              ease: "linear",
+              times: steps.map((_, i) => i / (steps.length - 1)),
+              repeat: Infinity,
+              repeatType: "reverse",
+              repeatDelay: 1.2,
+            }}
           >
-            {"MD Nadim Rijvi Shakib".split("").map((char, i) => (
-              <motion.span
-                key={i}
-                className="inline-block"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + i * 0.04 }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              {name}
+            </span>
           </motion.h1>
 
           {/* Underline */}
@@ -82,7 +83,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
           >
-            Web Front End Developer
+            Front End Developer
           </motion.h2>
 
           {/* Tagline */}
@@ -93,13 +94,13 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
           >
-            Crafting beautiful, responsive web experiences with modern
-            technologies
+            Building digital experiences with purpose, personality, and
+            precision.
           </motion.p>
 
           {/* Actions */}
           <motion.div
-            className="w-full max-w-xl mt-4 sm:mt-6"
+            className="w-full max-w-2xl mt-4 sm:mt-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.7 }}
@@ -120,9 +121,9 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2
-          flex flex-col items-center gap-2 cursor-pointer"
+      {/* <motion.div
+        className="fixed right-1 -translate-x-1/2
+    flex flex-col items-center gap-2 cursor-pointer"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.1 }}
@@ -132,16 +133,19 @@ export const Hero = () => {
             ?.scrollIntoView({ behavior: "smooth" })
         }
       >
-        <p className="hidden sm:block text-xs sm:text-sm text-gray-400">
-          Scroll Down
-        </p>
+        <div className="hidden sm:flex flex-col items-center leading-tight text-xs sm:text-sm text-gray-400">
+          {"Scroll Down".split("").map((char, i) => (
+            <span key={i}>{char === " " ? "\u00A0" : char}</span>
+          ))}
+        </div>
+
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
           <FaArrowDown className="text-gray-400 text-sm sm:text-base" />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </header>
   );
 };
